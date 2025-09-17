@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewar Plots - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-bg {
+            background-color: #8c0c16;
+            color: white;
+        }
+        .red-bg {
+            background-color: #9d1519;
+            color: white;
+        }
+        .dark-red-bg {
+            background-color: #65070a;
+            color: white;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+        .form-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #fbc603;
+            color: #65070a;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-button:hover {
+            background-color: #e5b600;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header-bg p-4 text-center text-sm sm:text-base font-semibold">
+        Plots Near Jewar Airport from ₹18K | Immediate Possession
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-black text-white p-4 sm:p-8 overflow-hidden">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://placehold.co/1200x800/222/FFF?text=Jewar+Airport+Site" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/222/FFF?text=Jewar+Airport+Site';" alt="Jewar Airport Site" class="w-full h-full object-cover opacity-50">
+        </div>
+        
+        <div class="relative z-10 container flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2 p-4 sm:p-8">
+                <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+                    Affordable Plots Near Jewar Airport
+                </h1>
+                <h2 class="text-xl sm:text-2xl font-bold mb-4">
+                    Starting from just ₹18 Lakhs
+                </h2>
+                <ul class="text-lg space-y-2 mb-6">
+                    <li class="flex items-center"><svg class="w-6 h-6 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Approved Plots</li>
+                    <li class="flex items-center"><svg class="w-6 h-6 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Immediate Possession</li>
+                    <li class="flex items-center"><svg class="w-6 h-6 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Connected to Yamuna Expressway</li>
+                    <li class="flex items-center"><svg class="w-6 h-6 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Great Discounts Available</li>
+                </ul>
+                <button class="bg-yellow-400 text-red-800 font-bold py-3 px-6 rounded-lg text-lg sm:text-xl hover:bg-yellow-500 transition-colors duration-300">
+                    Book Your Site Visit
+                </button>
+            </div>
+
+            <!-- Form section -->
+            <div class="md:w-1/2 p-4 sm:p-8 bg-red-800 bg-opacity-80 rounded-lg card-shadow">
+                <form id="contactForm">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Get a Free Quote</h3>
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-white">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter Your Full Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-medium text-white">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter Your Phone Number">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-white">Email ID</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter Your Email">
+                    </div>
+                    <div class="mb-6">
+                        <label for="plot_size" class="block text-sm font-medium text-white">Plot Size</label>
+                        <select id="plot_size" name="plot_size" class="form-input">
+                            <option value="">Select Plot Size</option>
+                            <option value="50 गज">50 Sq Yds</option>
+                            <option value="100 गज">100 Sq Yds</option>
+                            <option value="200 गज">200 Sq Yds</option>
+                            <option value="300 गज">300 Sq Yds</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-button">
+                        Get Free Quote
+                    </button>
+                </form>
+                <div id="formMessage" class="mt-4 text-center font-bold"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hare Krishna Township Section -->
+    <section class="bg-white py-12 px-4 sm:px-8">
+        <div class="container text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-red-800 mb-2">Hare Krishna Township - Phase 2</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-8">Launching on May 11</h3>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-8">
+                <div class="md:w-1/2 lg:w-1/3">
+                    <img src="https://placehold.co/600x400/8B0000/FFF?text=Hare+Krishna+Township+Gate" onerror="this.onerror=null;this.src='https://placehold.co/600x400/8B0000/FFF?text=Hare+Krishna+Township+Gate';" alt="Hare Krishna Township Gate" class="rounded-lg w-full card-shadow">
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <p class="text-lg font-bold text-red-800 mb-2">Premium Plots on Yamuna Expressway</p>
+                    <ul class="text-gray-700 space-y-2 text-sm">
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 40ft and 30ft Wide Roads</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 4 Beautiful Parks and Green Zones</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Temple, School and Hospital</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 24x7 Security</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Fully Gated Society</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Just 12 Min Drive from Jewar Airport</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="bg-yellow-400 text-red-800 font-bold py-3 px-6 rounded-lg text-lg sm:text-xl hover:bg-yellow-500 transition-colors duration-300">
+                Call Our Experts
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="red-bg py-12 px-4 sm:px-8">
+        <div class="container">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white text-gray-800 p-6 rounded-lg card-shadow">
+                    <div class="flex text-yellow-500 mb-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="italic mb-4">"I booked a plot here. I got a good location and the documentation was also proper."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/333/FFF?text=RA" onerror="this.onerror=null;this.src='https://placehold.co/50x50/333/FFF?text=RA';" alt="Rahul Kumar" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Rahul Kumar</p>
+                            <a href="#" class="text-xs text-red-600 font-semibold hover:underline">Talk to Our Expert</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white text-gray-800 p-6 rounded-lg card-shadow">
+                    <div class="flex text-yellow-500 mb-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="italic mb-4">"I was satisfied after the site visit. I liked the environment here and immediately deposited the token."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/333/FFF?text=NS" onerror="this.onerror=null;this.src='https://placehold.co/50x50/333/FFF?text=NS';" alt="Nitin Singh" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Nitin Singh</p>
+                            <a href="#" class="text-xs text-red-600 font-semibold hover:underline">Talk to Our Expert</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white text-gray-800 p-6 rounded-lg card-shadow">
+                    <div class="flex text-yellow-500 mb-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="italic mb-4">"2 years ago I bought a plot of 5800 sq yds, and today its value has almost doubled. Thank you very much."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/333/FFF?text=SO" onerror="this.onerror=null;this.src='https://placehold.co/50x50/333/FFF?text=SO';" alt="Sonakshi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Sonakshi</p>
+                            <a href="#" class="text-xs text-red-600 font-semibold hover:underline">Talk to Our Expert</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Plan Section -->
+    <section class="dark-red-bg py-12 px-4 sm:px-8">
+        <div class="container flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-1/2">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">YEIDA 2031 Master Plan</h2>
+                <p class="mb-4">
+                    The YEIDA 2031 Master Plan outlines a futuristic vision for the Jewar region with the upcoming Noida International Airport. With seamless connectivity via the Yamuna Expressway and dedicated zones for industries, education, and residential development, this region is a hotbed for rapid growth.
+                </p>
+                <ul class="space-y-2 mb-6 text-sm sm:text-base">
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Proposed Noida Film City</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Logistics Hub, Industrial & Tech Zones</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> High Return Zone</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Lush Green Zones & Urban Planning</li>
+                </ul>
+                <button class="bg-yellow-400 text-red-800 font-bold py-3 px-6 rounded-lg text-lg sm:text-xl hover:bg-yellow-500 transition-colors duration-300">
+                    Learn More
+                </button>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/8B0000/FFF?text=YEIDA+Master+Plan" onerror="this.onerror=null;this.src='https://placehold.co/600x400/8B0000/FFF?text=YEIDA+Master+Plan';" alt="YEIDA Master Plan" class="rounded-lg w-full card-shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Images Section -->
+    <section class="bg-white py-12 px-4 sm:px-8">
+        <div class="container">
+            <h2 class="text-2xl sm:text-3xl font-bold text-red-800 text-center mb-8">Jewar Plot Site Images</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="https://placehold.co/400x300/8B0000/FFF?text=Site+Image+1" onerror="this.onerror=null;this.src='https://placehold.co/400x300/8B0000/FFF?text=Site+Image+1';" alt="Site Image 1" class="w-full h-auto rounded-lg card-shadow">
+                <img src="https://placehold.co/400x300/8B0000/FFF?text=Site+Image+2" onerror="this.onerror=null;this.src='https://placehold.co/400x300/8B0000/FFF?text=Site+Image+2';" alt="Site Image 2" class="w-full h-auto rounded-lg card-shadow">
+                <img src="https://placehold.co/400x300/8B0000/FFF?text=Site+Image+3" onerror="this.onerror=null;this.src='https://placehold.co/400x300/8B0000/FFF?text=Site+Image+3';" alt="Site Image 3" class="w-full h-auto rounded-lg card-shadow">
+                <img src="https://placehold.co/400x300/8B0000/FFF?text=Site+Image+4" onerror="this.onerror=null;this.src='https://placehold.co/400x300/8B0000/FFF?text=Site+Image+4';" alt="Site Image 4" class="w-full h-auto rounded-lg card-shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="red-bg py-12 px-4 sm:px-8">
+        <div class="container text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Location on Google Map</h2>
+            <div class="bg-white rounded-lg p-2 card-shadow">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14041.560197775586!2d77.56832626880026!3d28.28312527063167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cd89a811d51a3%3A0x6b45a4914c67675!2sJewar%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1628173499424!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-4 px-4 sm:px-8 text-center text-sm">
+        <p>&copy; 2024 Jewar Plots. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = 'Your details have been submitted successfully. We will contact you soon.';
+            formMessage.classList.add('text-green-400');
+            formMessage.classList.remove('text-red-400');
+
+            setTimeout(() => {
+                formMessage.textContent = '';
+                formMessage.classList.remove('text-green-400');
+            }, 5000);
+
+            this.reset();
+        });
+    </script>
+</body>
+</html>
