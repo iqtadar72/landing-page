@@ -8,11 +8,77 @@
   <style>
     body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; }
     .card-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-    .form-input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 5px; }
-    .form-button { width: 100%; padding: 12px; background-color: #fbc603; color: #65070a; font-weight: bold; border-radius: 8px; border: none; cursor: pointer; transition: background-color 0.3s ease; }
-    .form-button:hover { background-color: #e5b600; }
+    /* ===== Form Styling ===== */
+  .form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.05); /* Light transparent background */
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+  }
 
-    /* Popup Overlay */
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #000; /* text will be visible now */
+    background: #fff; /* white background for better contrast */
+    outline: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #777;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #45a049;
+  }
+
+  /* ===== Popup Styling (Same as before) ===== */
   .popup {
     display: none;
     position: fixed;
@@ -30,13 +96,11 @@
     transition: opacity 0.3s ease-in-out;
   }
 
-  /* Show popup */
   .popup.show {
     opacity: 1;
     pointer-events: auto;
   }
 
-  /* Popup Box */
   .popup-content {
     background: white;
     padding: 25px 30px;
@@ -100,52 +164,43 @@
         </a>
       </div>
 
-      <!-- Contact Form -->
-      
-       <form id="contactForm" action="https://formsubmit.co/thesofadiseno@gmail.com" method="POST">
-  <h3 class="text-xl sm:text-2xl font-bold mb-4 text-white">Send Enquiry</h3>
+     <div class="form-container">
+  <form id="contactForm" action="https://formsubmit.co/thesofadiseno@gmail.com" method="POST">
+    <h3 class="form-title">Send Enquiry</h3>
 
-  <!-- Name -->
-  <div class="mb-4">
-    <label for="name" class="block text-white font-medium">Name</label>
-    <input type="text" id="name" name="name" class="form-input" placeholder="Enter Your Full Name" required>
-  </div>
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
+    </div>
 
-  <!-- Phone -->
-  <div class="mb-4">
-    <label for="phone" class="block text-white font-medium">Phone Number</label>
-    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter Your Phone Number" required>
-  </div>
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+    </div>
 
-  <!-- Email -->
-  <div class="mb-4">
-    <label for="email" class="block text-white font-medium">Email ID</label>
-    <input type="email" id="email" name="email" class="form-input" placeholder="Enter Your Email" required>
-  </div>
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email ID</label>
+      <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+    </div>
 
-  <!-- Requirement -->
-  <div class="mb-4">
-    <label for="requirement" class="block text-white font-medium">Requirement</label>
-    <textarea id="requirement" name="requirement" rows="4" class="form-input" placeholder="Describe what you need..." required></textarea>
-  </div>
+    <!-- Requirement -->
+    <div class="form-group">
+      <label for="requirement">Requirement</label>
+      <textarea id="requirement" name="requirement" rows="4" placeholder="Describe what you need..." required></textarea>
+    </div>
 
-  <!-- Hidden fields -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="box"> <!-- nicer email format -->
+    <!-- Hidden fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
 
-  <button type="submit" class="form-button">Send Requirement</button>
-</form>
-
-<!-- Success Popup -->
-<div id="successPopup" class="popup">
-  <div class="popup-content">
-    <h2>✅ Success!</h2>
-    <p>Thank you! Your enquiry has been sent successfully.</p>
-    <button onclick="closePopup()">OK</button>
-  </div>
+    <button type="submit" class="submit-btn">Send Requirement</button>
+  </form>
 </div>
 
-      <script>
+<script>
   const form = document.getElementById("contactForm");
   const popup = document.getElementById("successPopup");
 
@@ -175,7 +230,6 @@
     popup.classList.remove("show");
   }
 </script>
-  </section>
 
   <!-- Services Section -->
   <section class="bg-white py-12 px-4 sm:px-8">
