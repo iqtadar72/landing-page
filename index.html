@@ -11,6 +11,65 @@
     .form-input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 5px; }
     .form-button { width: 100%; padding: 12px; background-color: #fbc603; color: #65070a; font-weight: bold; border-radius: 8px; border: none; cursor: pointer; transition: background-color 0.3s ease; }
     .form-button:hover { background-color: #e5b600; }
+
+    /* Popup Overlay */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Show popup */
+  .popup.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Popup Box */
+  .popup-content {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 320px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .popup.show .popup-content {
+    transform: scale(1);
+  }
+
+  .popup-content h2 {
+    color: green;
+    margin-bottom: 10px;
+  }
+
+  .popup-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .popup-content button:hover {
+    background: #45a049;
+  }
   </style>
 </head>
 <body>
@@ -42,29 +101,80 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="md:w-1/2 p-4 sm:p-8 bg-red-800 bg-opacity-80 rounded-lg card-shadow">
-        <form id="contactForm" action="send-mail.php" method="POST">
-          <h3 class="text-xl sm:text-2xl font-bold mb-4 text-white">Send Enquiry</h3>
-          <div class="mb-4">
-            <label for="name" class="block text-white font-medium">Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Enter Your Full Name" required>
-          </div>
-          <div class="mb-4">
-            <label for="phone" class="block text-white font-medium">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter Your Phone Number" required>
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-white font-medium">Email ID</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="Enter Your Email" required>
-          </div>
-          <div class="mb-4">
-            <label for="requirement" class="block text-white font-medium">Requirement</label>
-            <textarea id="requirement" name="requirement" rows="4" class="form-input" placeholder="Describe what you need..." required></textarea>
-          </div>
-          <button type="submit" class="form-button">Send Requirement</button>
-        </form>
-      </div>
-    </div>
+      
+       <form id="contactForm" action="https://formsubmit.co/thesofadiseno@gmail.com" method="POST">
+  <h3 class="text-xl sm:text-2xl font-bold mb-4 text-white">Send Enquiry</h3>
+
+  <!-- Name -->
+  <div class="mb-4">
+    <label for="name" class="block text-white font-medium">Name</label>
+    <input type="text" id="name" name="name" class="form-input" placeholder="Enter Your Full Name" required>
+  </div>
+
+  <!-- Phone -->
+  <div class="mb-4">
+    <label for="phone" class="block text-white font-medium">Phone Number</label>
+    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter Your Phone Number" required>
+  </div>
+
+  <!-- Email -->
+  <div class="mb-4">
+    <label for="email" class="block text-white font-medium">Email ID</label>
+    <input type="email" id="email" name="email" class="form-input" placeholder="Enter Your Email" required>
+  </div>
+
+  <!-- Requirement -->
+  <div class="mb-4">
+    <label for="requirement" class="block text-white font-medium">Requirement</label>
+    <textarea id="requirement" name="requirement" rows="4" class="form-input" placeholder="Describe what you need..." required></textarea>
+  </div>
+
+  <!-- Hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="box"> <!-- nicer email format -->
+
+  <button type="submit" class="form-button">Send Requirement</button>
+</form>
+
+<!-- Success Popup -->
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <h2>✅ Success!</h2>
+    <p>Thank you! Your enquiry has been sent successfully.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+      <script>
+  const form = document.getElementById("contactForm");
+  const popup = document.getElementById("successPopup");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.reset();
+          popup.classList.add("show");
+        } else {
+          alert("There was an error sending your message. Please try again.");
+        }
+      })
+      .catch(() => {
+        alert("Network error. Please try again later.");
+      });
+  });
+
+  function closePopup() {
+    popup.classList.remove("show");
+  }
+</script>
   </section>
 
   <!-- Services Section -->
